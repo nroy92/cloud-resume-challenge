@@ -16,13 +16,14 @@ Afterwards, will manually refactor to add finishing touches to the HTML resume.
 
 Prompt to ChatGPT:
 
-'''text
+```text
 Convert this resume format into html.
 Please don't use a CSS framework.
 Please use least amount of css tags.
-'''
+```
 
 Image provided to LLM:
+
 ![](./assets/harvard_resume_template.jpg)
 
 Unaltered HTML resume provided by LLM:
@@ -34,4 +35,5 @@ The [generated output](./assets/resume-minimal.html) output which I will refacto
 ## HTML Adjustments 
 
 - UTF8 support for most languages, I am looking into learning Japanese. Maybe something to consider down the line.
+
 - Will be applying mobile styling added viewport meta tag. For viewers to view on their phone as everyone has one by now.
