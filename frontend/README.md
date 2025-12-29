@@ -37,3 +37,32 @@ The [generated output](./assets/resume-minimal.html) output which I will refacto
 - UTF8 support for most languages, I am looking into learning Japanese. Maybe something to consider down the line.
 
 - Will be applying mobile styling added viewport meta tag. For viewers to view on their phone as everyone has one by now.
+
+## Serve Static Website Locally
+
+We need to serve our statuc website locally so we can start using stylesheets
+externally from our HTML page in a Cloud Developer Environment (CDE).
+
+Assuming we have node installed we'll use the simple web-server http-server
+
+### CSS Flexnotes
+
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+### Install HTTP Server
+```sh
+npm i http-server -g
+```
+
+## npm http-server in case for documentation
+https://www.npmjs.com/package/http-server
+
+### Server Website
+
+http-server will serve a public folder by default where the command is run.
+
+```sh
+cd frontend
+http-server
+```
+
