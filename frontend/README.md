@@ -66,3 +66,8 @@ cd frontend
 http-server
 ```
 
+### Frontend Framework Considerations
+
+- Used React as it's currently the most popular javascript framework
+- Using Vite.js as the frontend is very simple 
+
