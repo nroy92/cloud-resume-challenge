@@ -8,7 +8,6 @@ html, body {
     width: 100%;
     margin: 0px;
     padding: 0px;
-    background: url('/assets/images/textured-mulberry-paper.jpg');
 }
 
 main {
@@ -31,7 +30,7 @@ header nav {
 
 header nav a {
     padding: 24px;
-    background-color: rgb(255,255,255);
+    color: rgb(255, 255, 255);
 }
 
 div.content_wrap {
