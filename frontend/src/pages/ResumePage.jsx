@@ -1,34 +1,26 @@
 import React from "react";
+import '../assets/stylesheets/pages/resume.css'
+
+import resumeData from '../data/ResumeData.js'
+import ResumeHeader from '../components/resume/ResumeHeader.jsx'
+import ResumeSectionItem from "../components/resume/ResumeSectionItem.jsx"; 
 
 export default function ResumePage () {
     return (
         <>
-        <section className="header">
-            <h1>Nikko Roy</h1>
-            <p>
-                Somerville, NJ
-                &bull;
-                <a href="nikko.roy.business@gmail.com">nikko.roy.business@gmail.com</a>
-            </p>
-            </section>
-
+        
+            <ResumeHeader person={resumeData.person}></ResumeHeader>
             <section className="Experience">
             <h2>Experience</h2>
             <div className="items">
-                <div className="item">
-                <div className="item_heading">
-                    <div className="info">
-                    <h3>Kumon of North America &mdash; QA Analyst/Business Application Support</h3>
-                    </div>
-                    <div className="details">
-                    <div className="location">Rutherford, NJ</div>
-                    <div className="duration">2025 - Present</div>
-                    </div>
-                </div>
+                <ResumeSectionItem item={resumeData.sections.education} />
+                {Array.isArray(item.details) && items.details.length > 0 && (
                 <ul>
-                    <li>TO DO: Fill out with experience</li>
+                    {item.details.map((text) => (
+                        <li key={text}>{text}</li>
+                    ))}
                 </ul>
-                </div>
+            )}
             </div>
             </section>
 
@@ -45,16 +37,13 @@ export default function ResumePage () {
             <section className="Education">
             <h2>Education</h2>
             <div className="items">
-                <div className="item">
-                <div className="info">
-                    <h3>New Jersey Institute of Technology</h3>
-                    <p>B.S. in Information Technology</p>
-                </div>
-                <div className="details">
-                    <div className="location">Newark, NJ</div>
-                    <div className="duration">2010 - 2015</div>
-                </div>
-                </div>
+                {Array.isArray(resumeData.sections.education) && resumeData.sections.education.length > 0 && (
+                <ul>
+                    {resumeData.sections.education.map((item) => (
+                        <ResumeSectionItem item={item} />
+                    ))}
+                </ul>
+            )}
             </div>
             </section>
         </>
